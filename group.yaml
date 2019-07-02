@@ -1,0 +1,11 @@
+---
+- hosts: group1
+  become: yes
+  tasks:
+    - name: create group testgroup
+      group: 
+        name: testgrp1 
+        state: present
+
+
+
