@@ -1,0 +1,8 @@
+---
+ - hosts: group1
+   become: true
+   tasks:
+     - name: disabling nginx service
+       service: name=nginx state=stopped
+     - name: uninstalling nginx package
+       yum: name=nginx state=absent
